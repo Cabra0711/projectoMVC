@@ -5,9 +5,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+/*
+ * Inicializamos un contructor que este va a buscar llave valor segun la conexion string que le tengamos asignada
+ * este va a sobreescribir el valor anterior y asi sucesivamente este va a a darle prioridad a la ultima clave que llegue
+ * y se le asignara la ultima.
+ */
 builder.Services.AddDbContext<MySqlDbContext>(options =>
-    options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
-        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("DefaultConnection"))));
+    options.UseMySql(builder.Configuration.GetConnectionString("MySqlConnection"),
+        ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("MySqlConnection"))));
 
 var app = builder.Build();
 

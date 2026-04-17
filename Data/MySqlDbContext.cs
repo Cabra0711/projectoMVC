@@ -7,7 +7,7 @@ public class MySqlDbContext : DbContext
 {
     public MySqlDbContext(DbContextOptions<MySqlDbContext> options) : base(options)
     {
-        
+            
     }
     
     public DbSet<Evento> Eventos { get; set; }

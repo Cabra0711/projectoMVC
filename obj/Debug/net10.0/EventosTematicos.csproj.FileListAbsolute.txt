@@ -220,3 +220,4 @@
 /home/cohorte5/Documentos/Eventos/EventosTematicos/bin/Debug/net10.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
 /home/cohorte5/Documentos/Eventos/EventosTematicos/obj/Debug/net10.0/EventosTematicos.csproj.AssemblyReference.cache
 /home/cohorte5/Documentos/Eventos/EventosTematicos/obj/Debug/net10.0/EventosT.6251D8AF.Up2Date
+/home/cohorte5/Documentos/Eventos/EventosTematicos/obj/Debug/net10.0/EventosTematicos.sourcelink.json

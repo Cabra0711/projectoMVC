@@ -15,4 +15,6 @@ public class Evento
     public string FechaTransformada => Fecha.ToString("dd/MM/yyyy");
 
     
+    
+    
 }
