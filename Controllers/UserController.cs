@@ -14,7 +14,7 @@ public class UserController : Controller
     
     public IActionResult Index()
     {
-        var eventos = _context.Eventos.ToList();
+        var eventos = _context.EventosTematicos.ToList();
         return View(eventos);
     }
     public IActionResult Create()

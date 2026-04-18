@@ -10,5 +10,5 @@ public class MySqlDbContext : DbContext
             
     }
     
-    public DbSet<Evento> Eventos { get; set; }
+    public DbSet<Evento> EventosTematicos { get; set; }
 }
