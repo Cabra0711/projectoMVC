@@ -6,7 +6,6 @@ public class Evento
 {
     public int Id { get; set; }
     public string Nombre { get; set; }
-
     [Column("url_imagen")] 
     public string UrlImagen { get; set; }
 

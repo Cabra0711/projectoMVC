@@ -1,14 +1,16 @@
+@model EventosTematicos.Models.Evento
+
 <section class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card shadow-sm border-0 p-4">
                 <h2 class="fw-bold mb-4 border-bottom pb-2">Crea tu Evento</h2>
                 
-                <form>
+                <form method="post" asp-controller="User" asp-action="Create">
                     <div class="row g-3 mb-3 justify-content-center">
                         <div class="col-md-8 ">
                             <label class="form-label fw-bold">Nombre del Evento</label>
-                            <input type="text" class="form-control rounded-pill" placeholder="Ej: Arcángel en Medellín">
+                            <input asp-for="Nombre" class="form-control rounded-pill" placeholder="Ej: Arcángel en Medellín">
                         </div>
                     </div>
 
@@ -16,45 +18,45 @@
                         <label class="form-label fw-bold">URL de la Imagen del Banner</label>
                         <div class="input-group">
                             <span class="input-group-text bg-white rounded-start-pill"><i class="bi bi-link-45deg"></i></span>
-                            <input type="url" class="form-control rounded-end-pill" placeholder="Pega el enlace de la imagen aquí...">
+                            <input asp-for="UrlImagen" class="form-control rounded-end-pill" placeholder="Pega el enlace de la imagen aquí...">
                         </div>
                     </div>
 
                     <div class="row g-3 mb-3">
                         <div class="col-md-4">
                             <label class="form-label fw-bold">Fecha</label>
-                            <input type="date" class="form-control rounded-pill">
+                            <input asp-for="Fecha" class="form-control rounded-pill">
                         </div>
                         <div class="col-md-4">
                             <label class="form-label fw-bold">Hora Inicio</label>
-                            <input type="time" class="form-control rounded-pill">
+                            <input asp-for="HoraInicio" class="form-control rounded-pill">
                         </div>
                         <div class="col-md-4">
                             <label class="form-label fw-bold">Hora Fin</label>
-                            <input type="time" class="form-control rounded-pill">
+                            <input asp-for="HoraFin" class="form-control rounded-pill">
                         </div>
                     </div>
 
                     <div class="row g-3 mb-4">
                         <div class="col-md-7">
-                            <label class="form-label fw-bold">Lugar / Ubicación</label>
+                            <label class="form-label fw-bold ">Lugar / Ubicación</label>
                             <div class="input-group">
                                 <span class="input-group-text bg-white rounded-start-pill"><i class="bi bi-geo-alt"></i></span>
-                                <input type="text" class="form-control rounded-end-pill" placeholder="Ej: Estadio Atanasio Girardot">
+                                <input asp-for="Ubicacion" class="form-control rounded-end-pill" placeholder="Ej: Estadio Atanasio Girardot">
                             </div>
                         </div>
                         <div class="col-md-5">
                             <label class="form-label fw-bold">Precio (COP)</label>
                             <div class="input-group">
                                 <span class="input-group-text bg-white rounded-start-pill">$</span>
-                                <input type="number" class="form-control rounded-end-pill" placeholder="0.00">
+                                <input asp-for="Precio" class="form-control rounded-end-pill" placeholder="0.00">
                             </div>
                         </div>
                     </div>
 
                     <div class="mb-4">
                         <label class="form-label fw-bold">Descripción corta</label>
-                        <textarea class="form-control" rows="3" style="border-radius: 15px;" placeholder="Cuéntales de qué trata el evento..."></textarea>
+                        <textarea asp-for="Descripcion" rows="3" style="border-radius: 15px;" placeholder="Cuéntales de qué trata el evento..."></textarea>
                     </div>
 
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end">

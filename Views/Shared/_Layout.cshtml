@@ -13,12 +13,12 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand fw-bold" href="#">Eventos Tematicos</a>
+                <a class="navbar-brand fw-bold" asp-action="Index" asp-controller="User">Eventos Tematicos</a>
                 <div class="collapse navbar-collapse justify-content-center">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Show Events</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Create</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-action="Index" asp-controller="User">Show Events</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-action="Admin" asp-controller="User">ADMIN</a></li>
                     </ul>
                 </div>
             </div>
@@ -30,12 +30,54 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2026 - EventosTematicos - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+<footer class="bg-dark text-white pt-5 pb-4 mt-5">
+    <div class="container text-center text-md-start">
+        <div class="row text-center text-md-start">
+            
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 fw-bold text-warning">Eventos Temáticos</h5>
+                <p class="small text-secondary">
+                    La mejor plataforma para encontrar los conciertos de tus artistas favoritos en Medallo. ¡No te quedes por fuera del parche!
+                </p>
+            </div>
+
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h5 class="text-uppercase mb-4 fw-bold text-warning">Explorar</h5>
+                <p><a asp-action="Index" class="text-white text-decoration-none small">Inicio</a></p>
+                <p><a asp-action="Admin" class="text-white text-decoration-none small">Administrar</a></p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 small">
+                <h5 class="text-uppercase mb-4 fw-bold text-warning">Contacto</h5>
+                <p><i class="bi bi-house-door-fill me-2"></i> Envigado, Antioquia</p>
+                <p><i class="bi bi-envelope-fill me-2"></i> info@eventos.com</p>
+                <p><i class="bi bi-phone-fill me-2"></i> +57 300 123 4567</p>
+            </div>
+
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+        <hr class="mb-4">
+
+        <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8">
+                <p class="small">© 2026 Todos los derechos reservados por: 
+                    <a href="#" class="text-warning text-decoration-none"><strong>Juan Esteban Cabrera</strong></a>
+                </p>
+            </div>
+            <div class="col-md-5 col-lg-4">
+                <div class="text-center text-md-end">
+                    <ul class="list-unstyled list-inline">
+                        <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-instagram"></i></a></li>
+                        <li class="list-inline-item"><a href="#" class="btn-floating btn-sm text-white" style="font-size: 23px;"><i class="bi bi-twitter-x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
